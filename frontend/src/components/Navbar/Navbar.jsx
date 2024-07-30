@@ -6,7 +6,7 @@ import { StoreContext } from '../../Context/StoreContext'
 
 const Navbar = ({ setShowLogin }) => {
 
-  const [menu, setMenu] = useState("home");
+  const [menu, setMenu] = useState("Home");
   const { getTotalCartAmount, token ,setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
@@ -18,12 +18,12 @@ const Navbar = ({ setShowLogin }) => {
 
   return (
     <div className='navbar'>
-      <Link to='/'><img className='logo' src={assets.logo} alt="" /></Link>
+      <Link to='/'><img className='logo' src={assets.LogoZ} alt="" /></Link>
       <ul className="navbar-menu">
-        <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>home</Link>
-        <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>menu</a>
-        <a href='#app-download' onClick={() => setMenu("mob-app")} className={`${menu === "mob-app" ? "active" : ""}`}>mobile app</a>
-        <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>contact us</a>
+        <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>Home</Link>
+        <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>Menu</a>
+        {/* <a href='#app-download' onClick={() => setMenu("mob-app")} className={`${menu === "mob-app" ? "active" : ""}`}>Mobile App</a> */}
+        <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>Contact Us</a>
       </ul>
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
@@ -31,7 +31,7 @@ const Navbar = ({ setShowLogin }) => {
           <img src={assets.basket_icon} alt="" />
           <div className={getTotalCartAmount() > 0 ? "dot" : ""}></div>
         </Link>
-        {!token ? <button onClick={() => setShowLogin(true)}>sign in</button>
+        {!token ? <button onClick={() => setShowLogin(true)}>Sign In</button>
           : <div className='navbar-profile'>
             <img src={assets.profile_icon} alt="" />
             <ul className='navbar-profile-dropdown'>
