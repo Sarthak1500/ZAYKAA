@@ -5,7 +5,13 @@
     align-items: center;
 }
 
-.navbar .LogoZ {
+.content {
+    margin-top: 60px; /* Adjust this value to match the height of your navbar */
+    padding: 20px;
+}
+
+
+.navbar .LogoZAYKAA {
     width: 150px;
 }
 
@@ -96,7 +102,7 @@ position: relative;
     border: none;
 }
 @media (max-width:1050px) {
-    .navbar .LogoZ {
+    .navbar .LogoZAYKAA {
         width: 140px;
     }
 
@@ -119,7 +125,7 @@ position: relative;
 }
 
 @media (max-width:900px) {
-    .navbar .LogoZ {
+    .navbar .LogoZAYKAA {
         width: 120px;
     }
 
