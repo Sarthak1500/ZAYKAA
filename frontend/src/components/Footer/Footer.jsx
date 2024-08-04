@@ -9,6 +9,10 @@ const Footer = () => {
         <div className="footer-content-left">
             <img src={assets.LogoZAYKAA} alt="" style={{ marginLeft: '-14px' }}/>
             <p>Zaykaa is an ultimate destination for fast, fresh, and delicious food delivery right at your doorstep.</p>
+
+
+            {}
+ main
             <div className="footer-social-icons">
                 <img src={assets.facebook_icon} alt="" />
                 <img src={assets.twitter_icon} alt="" />
@@ -32,7 +36,8 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2024 © ZAYKAA.com - All Rights Reserved.</p>
+
+ main
     </div>
   )
 }
