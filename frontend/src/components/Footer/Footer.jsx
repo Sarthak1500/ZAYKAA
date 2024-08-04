@@ -36,8 +36,6 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-
- main
     </div>
   )
 }
