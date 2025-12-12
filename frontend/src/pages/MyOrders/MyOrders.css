@@ -35,6 +35,30 @@
     cursor: pointer;
     color: #454545;
 }
+
+.my-orders button{
+    border: none;
+    padding: 12px 0px;
+    border-radius: 4px;
+    background-color: #FFE1E1;
+    cursor: pointer;
+    color: #454545;
+}
+
+.my-orders .no-orders-message {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px dashed #cccccc;
+    border-radius: 8px;
+}
+
+.my-orders .no-orders-message p {
+    font-size: 18px;
+    color: #888;
+    font-weight: 500;
+}
+
 @media (max-width:900px) {
     .my-orders-order{
         grid-template-columns: 1fr 2fr 1fr;
