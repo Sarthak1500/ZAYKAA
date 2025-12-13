@@ -1,6 +1,6 @@
 import basket_icon from './basket_icon.png'
-import logo from './logo.png'
-import LogoZ from './LogoZ.png'
+// import logo from './logo.png'
+// import LogoZ from './LogoZ.png'
 import LogoZAYKAA from './LogoZAYKAA.png'
 import header_img from './header_img.png'
 import search_icon from './search_icon.png'
@@ -49,8 +49,6 @@ import food_32 from './food_32.png'
 import add_icon_white from './add_icon_white.png'
 import add_icon_green from './add_icon_green.png'
 import remove_icon_red from './remove_icon_red.png'
-import app_store from './app_store.png'
-import play_store from './play_store.png'
 import linkedin_icon from './linkedin_icon.png'
 import facebook_icon from './facebook_icon.png'
 import twitter_icon from './twitter_icon.png'
@@ -65,8 +63,6 @@ import checked from './checked.png'
 import un_checked from './un_checked.png'
 
 export const assets = {
-    logo,
-    LogoZ,
     LogoZAYKAA,
     basket_icon,
     header_img,
@@ -75,8 +71,6 @@ export const assets = {
     add_icon_green,
     add_icon_white,
     remove_icon_red,
-    app_store,
-    play_store,
     linkedin_icon,
     facebook_icon,
     twitter_icon,
