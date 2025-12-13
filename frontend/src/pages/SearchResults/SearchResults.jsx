@@ -1,0 +1,47 @@
+import React, { useContext, useState, useEffect } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
+import { StoreContext } from '../../Context/StoreContext';
+import FoodItem from '../../components/FoodItem/FoodItem';
+import './SearchResults.css';
+
+const SearchResults = () => {
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get('q') || '';
+  const { food_list } = useContext(StoreContext);
+  const navigate = useNavigate();
+
+  const filteredFoods = food_list.filter(item => {
+    const searchLower = query.toLowerCase();
+    return (
+      item.name.toLowerCase().includes(searchLower) ||
+      item.description?.toLowerCase().includes(searchLower) ||
+      item.category?.toLowerCase().includes(searchLower)
+    );
+  });
+
+  return (
+    <div className='search-results-container'>
+      <div className='search-results-header'>
+        <h2>Search Results for "{query}"</h2>
+        <p className='results-count'>
+          {filteredFoods.length} {filteredFoods.length === 1 ? 'item' : 'items'} found
+        </p>
+      </div>
+
+      {filteredFoods.length > 0 ? (
+        <div className='search-results-list'>
+          {filteredFoods.map((item) => (
+            <FoodItem key={item._id} {...item} />
+          ))}
+        </div>
+      ) : (
+        <div className='no-results'>
+          <h3>No items found</h3>
+          <p>Try searching with different keywords</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SearchResults;
