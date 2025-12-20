@@ -284,6 +284,138 @@
     box-shadow: 0 6px 16px rgba(255, 76, 36, 0.4);
 }
 
+
+
+/* ================= LOGIN REQUIRED CART ================= */
+
+.login-required {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 40px 20px;
+}
+
+.login-required-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fff9f7 100%);
+    padding: 60px 45px;
+    border-radius: 22px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid #f0f0f0;
+    animation: fadeInScale 0.5s ease;
+}
+
+.login-required-icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 25px;
+    opacity: 0.35;
+    filter: grayscale(1);
+}
+
+.login-required-card h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 12px;
+}
+
+.login-required-card p {
+    font-size: 16px;
+    color: #676767;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.login-required-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #FF4C24 0%, #ff6b42 100%);
+    color: #fff;
+    border: none;
+    padding: 14px 38px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(255, 76, 36, 0.35);
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #e3431f 0%, #ff5530 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 76, 36, 0.45);
+}
+
+.browse-btn {
+    background: #ffffff;
+    color: #FF4C24;
+    border: 1.5px solid #FF4C24;
+    padding: 14px 34px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.browse-btn:hover {
+    background: #FF4C24;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+    .login-required-card {
+        padding: 40px 30px;
+    }
+
+    .login-required-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .login-required-card h2 {
+        font-size: 22px;
+    }
+
+    .login-required-card p {
+        font-size: 14px;
+    }
+
+    .login-btn,
+    .browse-btn {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+}
+
+
+
 @media(max-width:750px) {
     .cart {
         margin: 50px 15px;

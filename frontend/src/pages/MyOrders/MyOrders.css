@@ -59,6 +59,53 @@
     font-weight: 500;
 }
 
+
+
+/* Keep all your existing CSS and ADD these at the bottom */
+
+.loading-message {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+.no-orders-message {
+    text-align: center;
+    margin-top: 50px;
+    padding: 60px 40px;
+    border: 2px dashed #cccccc;
+    border-radius: 12px;
+    background: #f9f9f9;
+}
+
+.no-orders-message p {
+    font-size: 20px;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.no-orders-message button {
+    background-color: #FF4C24;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.no-orders-message button:hover {
+    background-color: #e3431f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 76, 36, 0.3);
+}
+
+
+
 @media (max-width:900px) {
     .my-orders-order{
         grid-template-columns: 1fr 2fr 1fr;
