@@ -11,14 +11,13 @@ const frontend_URL = "http://localhost:5173";
 const placeOrder = async (req, res) => {
   try {
     const newOrder = new orderModel({
-      // userId: req.body.userId,
-      userId: req.userId,
+      userId: req.body.userId,
       items: req.body.items,
       amount: req.body.amount,
       address: req.body.address,
     });
     await newOrder.save();
-    await userModel.findByIdAndUpdate(req.userId, { cartData: {} });
+    await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} });
 
     const line_items = req.body.items.map((item) => ({
       price_data: {
@@ -60,15 +59,15 @@ const placeOrder = async (req, res) => {
 const placeOrderCod = async (req, res) => {
   try {
     const newOrder = new orderModel({
-      // userId: req.body.userId,
-      userId: req.userId,
+      userId: req.body.userId,
       items: req.body.items,
       amount: req.body.amount,
       address: req.body.address,
       payment: true,
     });
     await newOrder.save();
-    await userModel.findByIdAndUpdate(req.userId, { cartData: {} });
+    await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} });
+
     res.json({ success: true, message: "Order Placed" });
   } catch (error) {
     console.log(error);
@@ -90,11 +89,11 @@ const listOrders = async (req, res) => {
 // User Orders for Frontend
 const userOrders = async (req, res) => {
   try {
-    const orders = await orderModel.find({ userId: req.userId });
+    const orders = await orderModel.find({ userId: req.body.userId });
     res.json({ success: true, data: orders });
   } catch (error) {
     console.log(error);
-    res.json({ success: false, message: "Error fetching orders" });
+    res.json({ success: false, message: "Error" });
   }
 };
 

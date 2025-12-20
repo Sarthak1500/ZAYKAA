@@ -48,31 +48,6 @@
   font-size: 16px;
 }
 
-
-
-/* Keep all your existing CSS and ADD this at the bottom */
-
-.back-to-menu-btn {
-    margin-top: 20px;
-    padding: 12px 28px;
-    background-color: #FF4C24;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.back-to-menu-btn:hover {
-    background-color: #e3431f;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 76, 36, 0.3);
-}
-
-
-
 @media (max-width: 768px) {
   .search-results-container {
     padding: 20px 15px;

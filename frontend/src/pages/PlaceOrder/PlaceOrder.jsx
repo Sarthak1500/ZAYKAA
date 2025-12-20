@@ -42,7 +42,7 @@ const PlaceOrder = () => {
   const placeOrder = async (e) => {
     e.preventDefault();
     let orderItems = [];
-    food_list.forEach((item) => {
+    food_list.map((item) => {
       if (cartItems[item._id] > 0) {
         let itemInfo = item;
         itemInfo["quantity"] = cartItems[item._id];
@@ -56,10 +56,7 @@ const PlaceOrder = () => {
     };
     if (payment === "stripe") {
       let response = await axios.post(url + "/api/order/place", orderData, {
-        // headers: { token },
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        headers: { token },
       });
       if (response.data.success) {
         const { session_url } = response.data;
@@ -69,10 +66,7 @@ const PlaceOrder = () => {
       }
     } else {
       let response = await axios.post(url + "/api/order/placecod", orderData, {
-        // headers: { token },
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        headers: { token },
       });
       if (response.data.success) {
         navigate("/myorders");
@@ -86,12 +80,12 @@ const PlaceOrder = () => {
 
   useEffect(() => {
     if (!token) {
-      toast.error("To place an order, sign in first");
+      toast.error("to place an order sign in first");
       navigate("/cart");
     } else if (getTotalCartAmount() === 0) {
       navigate("/cart");
     }
-  }, [token, getTotalCartAmount, navigate]);
+  }, [token]);
 
   return (
     <form onSubmit={placeOrder} className="place-order">
